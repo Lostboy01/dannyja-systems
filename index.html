@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>DANNYJA SYSTEMS</title>
+  <meta name="description" content="Craftsmanship + Systems Intelligence" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            teal: { 500: '#14b8a6', 600: '#0d9488', 700: '#115e59' },
+            pink: { 400: '#f472b6', 500: '#ec4899', 600: '#db2777' },
+          },
+          fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] },
+        }
+      }
+    }
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+  <style>
+    .gradient-text { background: linear-gradient(90deg, #14b8a6, #ec4899); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    .animate-fade { animation: fadeIn 1s ease-out forwards; }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+  </style>
+</head>
+<body class="bg-black text-white min-h-screen" x-data="{ dark: true }" :class="dark ? 'dark' : ''">
+  <div class="fixed top-6 right-6 z-50">
+    <button @click="dark = !dark" class="p-3 rounded-full bg-gray-800 hover:bg-gray-700 transition">
+      <span x-show="dark">🌙</span>
+      <span x-show="!dark">☀️</span>
+    </button>
+  </div>
+
+  <section class="min-h-screen flex items-center justify-center px-6">
+    <div class="text-center animate-fade">
+      <h1 class="text-6xl md:text-8xl font-black mb-6">
+        <span class="gradient-text">DANNYJA</span> SYSTEMS
+      </h1>
+      <p class="text-2xl md:text-4xl font-light text-teal-400 mb-8">
+        I turn complex problems into elegant systems
+      </p>
+      <a href="#about" class="inline-block mt-12 px-10 py-4 bg-teal-500 hover:bg-teal-600 text-black font-bold rounded-lg transition">
+        Explore the work →
+      </a>
+    </div>
+  </section>
+
+  <section id="about" class="py-24 px-6 max-w-4xl mx-auto animate-fade">
+    <h2 class="text-5xl md:text-6xl font-bold mb-12 text-center gradient-text">Who I Am</h2>
+    <p class="text-xl leading-relaxed text-gray-300 text-center">
+      Physical capability meets digital precision. I’m a systems thinker who builds robust, beautiful solutions at the intersection of engineering, code, and human ingenuity. Whether it’s automating infrastructure, designing intelligent workflows, or crafting pixel-perfect digital experiences — I deliver craftsmanship at scale.
+    </p>
+  </section>
+
+  <section class="py-24 px-6 bg-gray-950">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-5xl md:text-6xl font-bold mb-16 text-center gradient-text">Capabilities</h2>
+      <div class="grid md:grid-cols-3 gap-10">
+        <div class="bg-gray-900 p-8 rounded-2xl border border-teal-900 hover:border-pink-500 transition">
+          <h3 class="text-2xl font-bold text-teal-400 mb-4">Systems Architecture</h3>
+          <p class="text-gray-400">Cloud-native infrastructure, automation pipelines, and resilient distributed systems.</p>
+        </div>
+        <div class="bg-gray-900 p-8 rounded-2xl border border-teal-900 hover:border-pink-500 transition">
+          <h3 class="text-2xl font-bold text-pink-400 mb-4">Full-Stack Craft</h3>
+          <p class="text-gray-400">From low-level Linux scripting to elegant frontends — everything built with precision.</p>
+        </div>
+        <div class="bg-gray-900 p-8 rounded-2xl border border-teal-900 hover:border-pink-500 transition">
+          <h3 class="text-2xl font-bold text-teal-400 mb-4">Problem Destruction</h3>
+          <p class="text-gray-400">I see chaos, complexity, and “impossible” constraints — then I make them disappear.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects" class="py-24 px-6 max-w-6xl mx-auto">
+    <h2 class="text-5xl md:text-6xl font-bold mb-16 text-center gradient-text">Selected Projects</h2>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+      <div class="bg-gray-900 rounded-2xl overflow-hidden hover:scale-105 transition">
+        <div class="h-48 bg-gradient-to-br from-teal-600 to-pink-600"></div>
+        <div class="p-6"><h3 class="text-2xl font-bold text-teal-400">Project One</h3><p class="text-gray-400 mt-2">Coming soon — something legendary.</p></div>
+      </div>
+      <div class="bg-gray-900 rounded-2xl overflow-hidden hover:scale-105 transition">
+        <div class="h-48 bg-gradient-to-br from-pink-600 to-teal-600"></div>
+        <div class="p-6"><h3 class="text-2xl font-bold text-pink-400">Project Two</h3><p class="text-gray-400 mt-2">In stealth — preparing to blow minds.</p></div>
+      </div>
+      <div class="bg-gray-900 rounded-2xl overflow-hidden hover:scale-105 transition">
+        <div class="h-48 bg-gradient-to-br from-teal-500 to-gray-800"></div>
+        <div class="p-6"><h3 class="text-2xl font-bold text-teal-400">Project Three</h3><p class="text-gray-400 mt-2">Live soon. Stay tuned.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-24 px-6 bg-gray-950 text-center">
+    <h2 class="text-5xl md:text-6xl font-bold mb-12 gradient-text">Latest Writing</h2>
+    <p class="text-2xl text-gray-400 mb-10">Thoughts on systems, craft, and building the future — coming soon.</p>
+    <a href="mailto:hello@askava.systems" class="text-teal-400 hover:text-pink-400 text-xl underline">Want a preview? Ping me.</a>
+  </section>
+
+  <section class="py-32 px-6 text-center">
+    <h2 class="text-5xl md:text-7xl font-black mb-10 gradient-text">Let’s Build Something</h2>
+    <p class="text-2xl text-gray-400 mb-12">Have a complex problem? I probably love it.</p>
+    <a href="mailto:hello@askava.systems" class="inline-block px-12 py-6 bg-teal-500 hover:bg-pink-500 text-black font-bold text-2xl rounded-full transition">
+      hello@askava.systems →
+    </a>
+  </section>
+
+  <footer class="py-12 text-center text-gray-600 text-sm">
+    © 2025 DANNYJA SYSTEMS • Built with blood, sweat, and Netlify
+  </footer>
+</body>
+</html>
